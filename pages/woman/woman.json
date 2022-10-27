@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "heavyRec":"/components/heavyRec/heavyRec",
+    "viewPager":"/components/viewPager/viewPager",
+    "recommend":"/components/recommend/recommend",
+    "search":"/components/search/search"
+  }
+}

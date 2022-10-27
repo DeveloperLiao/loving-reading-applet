@@ -1,0 +1,70 @@
+<wxs module="filters" src="../../utils/filters.wxs"></wxs>
+<view class="detail" wx:if="{{!isLoading}}">
+  <view class="book-info">
+    <image class="book-img" src="{{bookCover}}"></image>
+    <view class="info-text">
+      <text class="info-title van-ellipsis">{{detailData.title}}</text>
+      <text class="info-word">作者：{{detailData.author.name}}</text>
+      <text class="info-word">分类：{{detailData['pris:book'].category||detailData['pris:book'].paydesc}}</text>
+      <text class="info-word">字数：{{filters.Words(detailData['pris:book'].words)}}万</text>
+      <text class="info-word">点击：{{detailData['pris:subscribe'].clicksCount}}</text>
+    </view>
+  </view>
+  <view class="book-button">
+    <button class="mybutton read" bindtap="toread">开始阅读</button>
+    <button class="mybutton down">下载整本</button>
+  </view>
+  <button class="toBookshelf">放入书架</button>
+  <view class="book-recent">
+    <text class="l-title">{{title}}</text>
+    <text style="color:#ABA499">{{filters.subStr(detailData.updated,0,10)}}更新</text>
+    <text class="new">最新</text>
+  </view>
+  <view class="content van-hairline--bottom">
+    <text class="content-title">内容简介</text>
+    <text decode="{{true}}" class="content-container">&emsp;&emsp;{{detailData.content.text}}</text>
+  </view>
+  <view class="sectionList van-hairline--bottom">
+    <text class="content-title">章节目录 <text class="catalogLen">(共{{catalogue.length}}章)</text></text>
+    <view class="mincat">
+      <block wx:if="{{catalogue}}">
+        <block wx:if="{{!catalogue[0].leaf}}">
+          <view>{{catalogue[0].title}}</view>
+          <view class="retract" wx:for="{{[1,2,3,4]}}" bindtap="toread" data-secId="{{ catalogue[item].secId }}" data-index="{{index}}" wx:key="index">
+            {{ catalogue[item].title }}
+          </view>
+        </block>
+        <block wx:else>
+          <view class="noretract" wx:for="{{[0,1,2,3,4]}}" data-index="{{index}}" bindtap="toread" data-secId="{{ catalogue[item].secId }}" wx:key="index">
+            {{ catalogue[item].title }}
+          </view>
+        </block>
+      </block>
+    </view>
+    <button class="moreSection" bindtap="getmoreSec">更多目录</button>
+  </view>
+  <view class="comment">
+    <text class="content-title">精彩评论<text class="catalogLen">({{comLength}})</text></text>
+    <view wx:if="{{jComment==false}}" class="empty-box">
+      <image class="empty" src="/images/empty.png"></image>
+      <view class="empty-text">暂无评论，快来抢沙发吧</view>
+    </view>
+    <view wx:else class="more-comment">
+      <view class="j-intro-wrap van-hairline--bottom" wx:for="{{jComment}}" wx:key="index">
+        <image class="tx" src="{{item.avatar?item.avatar:'/images/tx-default.png'}}"></image>
+        <view class="user">
+          <text class="username">{{item.nickName}}</text>
+          <text class="write-time">{{filters.toTime(item.time)}}</text>
+        </view>
+        <view class="star">
+          <text wx:for="{{[1,2,3,4,5]}}" wx:key="index" wx:for-item="curr" class="{{item.grade<index+1?'s-dark':'s-light'}}"></text>
+        </view>
+        <view class="desc">{{item.comment}}</view>
+        <view class="likes">
+          <text class="like-text">{{item.likes==0?'赞':item.likes}}</text>
+          <text class="like-img"></text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

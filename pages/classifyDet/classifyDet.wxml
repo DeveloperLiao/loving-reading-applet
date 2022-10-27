@@ -1,0 +1,36 @@
+<!--pages/classifyDet/classifyDet.wxml-->
+<wxs module="filters" src="../../utils/filters.wxs"></wxs>
+<view class="classifyDet">
+  <view class="select-panel">
+    <view bindtap="changesort">
+      <text>时间：</text>
+      <button data-sort="2" class="chooseBtn {{sort==2?'actived':''}}">最热</button>
+      <button data-sort="1" class="chooseBtn {{sort==1?'actived':''}}">最新</button>
+    </view>
+    <view bindtap="changestatus">
+      <text>进度：</text>
+      <button data-status="0" class="chooseBtn {{status==0?'actived':''}}">全部</button>
+      <button data-status="2" class="chooseBtn {{status==2?'actived':''}}">已完结</button>
+      <button data-status="1" class="chooseBtn {{status==1?'actived':''}}">连载中</button>
+    </view>
+    <view bindtap="changepay">
+      <text>价格：</text>
+      <button data-pay="0" class="chooseBtn {{pay==0?'actived':''}}">全部</button>
+      <button data-pay="1" class="chooseBtn {{pay==1?'actived':''}}">免费</button>
+      <button data-pay="2" class="chooseBtn {{pay==2?'actived':''}}">付费</button>
+    </view>
+  </view>
+  <view class="list-box">
+    <view class="list-item" wx:for="{{claData}}" wx:key="sourceUrl" bindtap="toDetail" data-id="{{filters.subStr(item.sourceUrl,8)}}" data-name="{{item.title}}" data-cover="{{item.iconUrl}}">
+      <view class="item-container van-hairline--bottom">
+        <image src="{{item.iconUrl}}"></image>
+        <view class="info">
+          <text class="title text">{{item.title}}</text>
+          <text class="a-info text">{{item.author}}</text>
+          <text class="a-info text">{{item.readCount}}人阅读|{{!item.bookStatus?'连载中':'已完结'}}</text>
+          <text class="a-content text">{{filters.pFilter(item.description,'')}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

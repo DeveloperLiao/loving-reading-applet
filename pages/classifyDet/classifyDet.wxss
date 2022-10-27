@@ -1,0 +1,95 @@
+/* pages/classifyDet/classifyDet.wxss */
+@import '/miniprogram_npm/@vant/weapp/common/index.wxss';
+
+.select-panel {
+  width: 100%;
+  height: 226rpx;
+  box-sizing: border-box;
+  padding: 20rpx 30rpx 18rpx;
+  background-color: #ebe8e6;
+  color: #333333;
+  font-size: 28rpx;
+}
+
+.select-panel>view {
+  height: 62rpx;
+  line-height: 60rpx;
+}
+
+.chooseBtn {
+  /* width: 56rpx; */
+  height: 38rpx;
+  padding: 2rpx 10rpx;
+  box-sizing: content-box;
+  font-size: 28rpx;
+  line-height: 38rpx;
+  color: #ffffff;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 12rpx;
+  background-color: #BAB6B3;
+}
+
+.chooseBtn.actived {
+  background-color: #e4393c;
+}
+
+list-box {
+  width: 100%;
+}
+
+.list-item {
+  width: 100%;
+  height: 238rpx;
+  background-color: #FAF7F5;
+}
+
+.item-container {
+  padding: 30rpx 30rpx 30rpx 0;
+  margin-left: 30rpx;
+  width: 690rpx;
+  height: 176rpx;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.item-container>image {
+  width: 128rpx;
+  height: 100%;
+  margin-right: 20rpx;
+}
+
+.item-container .info {
+  width: 540rpx;
+  overflow: hidden;
+}
+
+.item-container .title {
+  color: #1d2c33;
+  font-size: 32rpx;
+}
+
+.item-container .text {
+  display: block;
+  color: #aaaaaa;
+}
+
+.a-info {
+  font-size: 24rpx;
+}
+
+.a-content {
+  padding-top: 8rpx;
+  font-size: 28rpx;
+  width: 100%;
+  height: 64rpx;
+  line-height: 32rpx;
+  /* overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; */
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+
+}

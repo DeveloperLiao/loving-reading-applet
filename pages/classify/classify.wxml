@@ -1,0 +1,10 @@
+<view class="classify">
+  <view class="m-lib {{item.channel}}" wx:for="{{classifyData}}" wx:key="channel">
+    <text class="m-lib-title"><text class="title-left"></text>{{item.name}}</text>
+    <view class="lib-list" bindtap="toClassifyDet" data-gender="{{item.channel}}">
+      <view class="lib-item van-ellipsis" wx:for="{{item.cates}}" wx:key="cateId" data-cateId="{{item.cateId}}" data-cateName="{{item.cateName}}">{{item.cateName}}</view>
+    </view>
+  </view>
+</view>
+<!-- <view class="m-lib woman"></view>
+<view class="m-lib book"></view> -->

@@ -1,0 +1,23 @@
+<!-- <text>目录</text> -->
+<view class="catalogue">
+  <view class="choose">
+    <view class="outOrhidden" bindtap="toggle">
+      第{{num/100}}页
+      <van-icon name="arrow-down" color="#aaaaaa" />
+    </view>
+  </view>
+  <van-overlay show="{{ show }}" bindtap="onClickHide">
+    <view class="chooseSec" hidden="{{isHidden}}" bindtap="chooSec">
+      <view data-num="{{index+1}}" class="{{num/100==index+1?'actived secNum':'secNum'}}" wx:for="{{allPage}}" wx:key="index">第{{item+1}}页</view>
+    </view>
+  </van-overlay>
+  <view class="cat-container">
+    <view class="grade" wx:for="{{showCat}}" wx:key="secId" bindtap="toread" data-secId="{{ item.secId }}" data-index="{{index+num-100}}">{{item.title}}
+      <van-icon wx:if="{{item.needPay}}" name="/images/icon-dispaid.png" class="dipaid"></van-icon>
+    </view>
+    <view class="page-btns" wx:if="{{showCat[0]}}">
+      <button bindtap="getPrevious" class="page-btn left toPrevious">上100章</button>
+      <button bindtap="getNext" class="page-btn right toNext">下100章</button>
+    </view>
+  </view>
+</view>

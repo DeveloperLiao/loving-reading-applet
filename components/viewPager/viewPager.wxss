@@ -1,0 +1,12 @@
+/* components/viewPager/viewPager.wxss */
+.swiperView{
+  height: 350rpx;
+  margin-bottom: 30rpx;
+}
+.swiperItem{
+  border-radius: 20rpx;
+}
+.swiperView .swiper-img{
+  height: 100%;
+  width: 100%;
+}

@@ -1,0 +1,7 @@
+<!--components/viewPager/viewPager.wxml-->
+<!-- <text>components/viewPager/viewPager.wxml</text> -->
+<swiper class="swiperView" indicator-dots="true" autoplay="true" circular="true" interval="3000">
+  <swiper-item class="swiperItem" wx:for="{{bannerData}}" wx:key="index" bindtap="toDetail" data-bookid="{{item.id}}" data-bookname="{{item.title}}">
+    <image class="swiper-img" src="{{item.cover}}"></image>
+  </swiper-item>
+</swiper>

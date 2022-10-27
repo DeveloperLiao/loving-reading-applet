@@ -1,0 +1,10 @@
+<view wx:if="{{!isLoading}}" class="woman-page">
+  <heavyRec heavyData="{{bookData[1]}}" nextData="{{bookData[7]}}"></heavyRec>
+  <view wx:if="{{bookData[0]}}">
+    <viewPager bannerData="{{bookData[0].banners}}"></viewPager>
+  </view>
+  <recommend nextData="{{bookData[2]}}"></recommend>
+  <recommend nextData="{{bookData[5]}}"></recommend>
+  <recommend nextData="{{bookData[8]}}"></recommend>
+  <search></search>
+</view>

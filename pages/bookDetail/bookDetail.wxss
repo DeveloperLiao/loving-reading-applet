@@ -1,0 +1,284 @@
+/* pages/bookDetail/bookDetail.wxss */
+@import '/miniprogram_npm/@vant/weapp/common/index.wxss';
+
+.detail {
+  width: 100vw;
+  /* padding-bottom: 200rpx; */
+}
+
+.book-info {
+  box-sizing: border-box;
+  height: 324rpx;
+  width: 100%;
+  padding: 30rpx;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.book-img {
+  width: 186rpx;
+  height: 260rpx;
+  margin-right: 20rpx;
+}
+
+.info-text {
+  width: 480rpx;
+}
+
+.info-title {
+  width: 480rpx;
+  display: block;
+  font-size: 32rpx;
+  margin-bottom: 10rpx;
+  font-weight: bold;
+}
+
+.info-word {
+  font-size: 24rpx;
+  color: #888888;
+  display: block;
+  height: 43.2rpx;
+  line-height: 43.2rpx;
+}
+
+.book-button {
+  width: 100%;
+  height: 98rpx;
+  padding: 20rpx 30rpx;
+  box-sizing: border-box;
+  margin-bottom: 28rpx;
+}
+
+.mybutton {
+  width: 324rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 1px 6px;
+  font-size: 28rpx;
+  margin-bottom: 28rpx;
+}
+
+.read {
+  background-color: #3c98c9;
+  color: #ffffff;
+  float: left;
+}
+
+.down {
+  color: #3c98c9;
+  border: 1px solid #3c98c9;
+  float: right;
+}
+
+.toBookshelf {
+  margin: 0 32rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  color: #998c7f;
+  background-color: #faf7f5;
+  margin-bottom: 30rpx;
+}
+
+.book-recent {
+  padding: 40rpx 30rpx 40rpx 90rpx;
+  background-color: #ebe8e6;
+  border-top: 1px solid #E8E7E6;
+  position: relative;
+  font-size: 24rpx;
+}
+
+.l-title {
+  font-size: 28rpx;
+  color: #3A98C9;
+  display: block;
+}
+
+.new {
+  position: absolute;
+  top: 40rpx;
+  left: 30rpx;
+  display: block;
+  width: 50rpx;
+  height: 30rpx;
+  font-size: 24rpx;
+  background: url(https://yuedust.yuedu.126.net/assets/mobile/images/book-detail/icon-recent.png?48ed274f) 0 0 no-repeat;
+  background-size: 100% 100%;
+  text-indent: -9999px;
+}
+
+.content {
+  /* height: 280rpx; */
+  padding: 30rpx 30rpx 20rpx 30rpx;
+  background-color: #faf7f5;
+  font-size: 28rpx;
+}
+
+.content-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  display: block;
+  color: black;
+}
+
+.content-container {
+  padding-top: 24rpx;
+  display: block;
+  color: #979999;
+}
+
+.sectionList {
+  padding: 30rpx 30rpx 20rpx 30rpx;
+  background-color: #faf7f5;
+  color: #979999;
+  width: 690rpx;
+  min-height: 249rpx;
+}
+
+.catalogLen {
+  color: #aba49a;
+  font-size: 24rpx;
+  font-weight: normal;
+}
+
+.mincat {
+  margin-top: 12rpx;
+}
+
+.retract {
+  overflow: hidden;
+  text-indent: 2em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.noretract {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.moreSection {
+  width: 99%;
+  background-color: #faf7f5;
+  color: #998D7F;
+  height: 56rpx;
+  line-height: 56rpx;
+  font-size: 24rpx;
+  margin-top: 28rpx;
+}
+
+.comment {
+  background-color: #faf7f5;
+  padding: 30rpx;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.empty-box {
+  width: 630rpx;
+  height: 420rpx;
+  text-align: center;
+  padding: 66rpx 0;
+  margin: 0 30rpx;
+}
+
+.empty-text {
+  color: #AAA;
+  font-size: 32rpx;
+  margin-top: 24rpx;
+}
+
+.empty {
+  width: 204rpx;
+  height: 228rpx;
+}
+
+.more-comment {
+  width: 100%;
+}
+
+.j-intro-wrap {
+  width: 100%;
+  min-height: 210rpx;
+  box-sizing: border-box;
+  padding: 30rpx 0;
+}
+
+.tx {
+  width: 68rpx;
+  height: 68rpx;
+  margin-right: 30rpx;
+  float: left;
+  border-radius: 50%;
+}
+
+.username {
+  color: #6392C5;
+  font-size: 28rpx;
+}
+
+.write-time {
+  font-size: 22rpx;
+  color: #999999;
+  float: right;
+}
+
+.star {
+  padding-top: 14rpx;
+}
+
+.star>text {
+  display: inline-block;
+  width: 20rpx;
+  height: 20rpx;
+  background-size: 100% 100%;
+}
+
+.s-dark {
+  background: url(https://yuedust.yuedu.126.net/assets/mobile/images/book-detail/star-dark.png?f04ab3f4) 0 0 no-repeat;
+}
+
+.s-light {
+  background: url(https://yuedust.yuedu.126.net/assets/mobile/images/book-detail/star-light.png?13871f2f) 0 0 no-repeat;
+}
+
+.desc {
+  padding-left: 98rpx;
+  padding-top: 20rpx;
+  line-height: 34rpx;
+  font-size: 28rpx;
+  color: #545454;
+  -webkit-line-clamp: 4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: break-all;
+}
+
+.likes {
+  margin-top: 20rpx;
+  height: 30rpx;
+  padding-left: 98rpx;
+  line-height: 40rpx;
+}
+
+.like-img {
+  display: block;
+  float: right;
+  width: 30rpx;
+  height: 30rpx;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABZ0RVh0Q3JlYXRpb24gVGltZQAwNi8xNi8xNQx3YfgAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzbovLKMAAABe0lEQVRIicWXzXmCQBCGX/J4Nx3EDmIHIRWEy5yTEuxA7EA7MFfmkNgBdqAdmA6kAnNgSFZcBRHhu8z+MS/7M7MQHA4HrpWqPgJz4N1p/gRiEdnV8RFcCzZoCjx7ujNgJCL7Kj8PV1FzfTjQGfBqFmBIvhKVGjQAR2YXIhJbOVVVgKnTf1FNZlxoU6qnZof3Ar+Y3TV4thlYVcdOtfIAtQYGwqIgIuWlvit4Ynbl6Rt72m4Hq2oMPFnVFzIjs+vWwAadFo5FJPUMC83W2oKzmUtVQ/KYjPif6dnMpKp1UmAGzEUkDpIk2eBPf2WtgehcOlTVPTVjGJgFSZJUvenW3nJZ06lXFoox8AZkf2ARCZxBJ21tSFUj4AtuS5lNFBaFvsDbzsB2jxeHeNnljEOnnPYB/hGRTR/gFDo6XKX9/e4MTGl/+wCvipTbNTgtGu4O9u1vJ2COw2jXCdhupKVVj75aBs6gk+ux5uVeRxnOMkM+40VLzi9BJ+WfuV/iCoGQbqA72gAAAABJRU5ErkJggg==);
+  background-size: 100% 100%;
+}
+
+.like-text {
+  float: right;
+  line-height: 40rpx;
+  width: 48rpx;
+  text-overflow: clip;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+  font-size: 22rpx;
+    color: #999;
+}

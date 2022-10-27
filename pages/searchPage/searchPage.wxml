@@ -1,0 +1,10 @@
+<!--pages/search/search.wxml-->
+<wxs module="filters" src="../../utils/filters.wxs"></wxs>
+<view class="searchPage">
+  <view class="search-bookele" bindtap="toDetail" wx:for="{{searchData}}" wx:key="bookId" data-id="{{item.bookId}}" data-name="{{item.title}}" data-cover="{{item.cover}}">
+    <image class="bookcover" src="{{item.cover}}"></image>
+    <view class="book-title">{{item.title}}</view>
+    <view class="author">{{item.author}}|{{item.category}}</view>
+    <view class="content">{{item.summary}}</view>
+  </view>
+</view>

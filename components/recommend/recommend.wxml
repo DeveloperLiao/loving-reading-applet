@@ -1,0 +1,16 @@
+<view class="next-container van-hairline--bottom">
+  <view class="title">
+    <text class="titleText">{{nextData.name}}</text>
+    <view class="more">更多</view>
+  </view>
+    <view class="next-item" wx:for="{{nextData.list}}" wx:key="index"
+    bindtap="toDetail" data-bookid="{{item.id}}" data-bookname="{{item.title}}"
+    data-bookcover="{{item.cover}}">
+      <image class="next-img" src="{{item.cover}}"></image>
+      <view class="next-info">
+        <text class="next-title van-ellipsis">{{item.title}}</text>
+        <text class="next-author">{{item.author}}</text>
+        <text class="next-intro van-multi-ellipsis--l3">{{item.content}}</text>
+      </view>
+    </view>
+  </view>

@@ -1,0 +1,9 @@
+<!--pages/read/read.wxml-->
+<!-- <text>pages/read/read.wxml</text> -->
+<view class="read">
+  <rich-text nodes="{{content}}"></rich-text>
+  <view class="btns">
+    <button class="btn prev" bindtap="toprev">上一章</button>
+    <button class="btn next" bindtap="tonext">下一章</button>
+  </view>
+</view>

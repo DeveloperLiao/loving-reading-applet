@@ -1,0 +1,40 @@
+var filters = {
+  toFix: function (value) {
+    return value.toFixed(2) // 此处2为保留两位小数，保留几位小数，这里写几    
+  },
+  toStr: function (value) {
+    return value.toString() //转换成字符串
+  },
+  toNum: function (value) {
+    return value.toNumber() //转换成数字
+  },
+  Words: function (value) {
+    return (value / 10000).toFixed(2)
+  },
+  subStr: function (val, start, end) {
+    if (!val) {
+      return;
+    }
+    return val.substring(start, end);
+  },
+  pFilter: function (str, offset) {
+    var reg = getRegExp('[\<p>\</p>]', "g");
+    return str.replace(reg, offset);
+  },
+  toTime: function (datetime) {
+    var date = getDate(datetime);
+    var year = date.getFullYear();
+    var month = date.getMonth() + 1;
+    var day = date.getDate();
+    return year + '-' + month + '-' + day 
+  }
+}
+module.exports = {
+  toFix: filters.toFix,
+  toStr: filters.toStr,
+  toNum: filters.toNum,
+  Words: filters.Words,
+  subStr: filters.subStr,
+  pFilter: filters.pFilter,
+  toTime: filters.toTime
+}

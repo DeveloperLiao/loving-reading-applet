@@ -1,0 +1,87 @@
+/* pages/catalogue/catalogue.wxss */
+@import '/miniprogram_npm/@vant/weapp/common/index.wxss';
+.catalogue{
+  width: 100vw;
+}
+.choose{
+  height: 72rpx;
+  width: 100%;
+  background-color: #ffffff;
+  line-height: 72rpx;
+}
+.outOrhidden{
+  text-align: center;
+  color: #aaaaaa;
+  font-size: 24rpx;
+}
+.chooseSec{
+  height: 294rpx;
+  padding: 26rpx 30rpx 0;
+  background-color: #faf7f5;
+  overflow: scroll;
+  border-bottom: 2rpx solid #998D80;
+}
+.secNum.actived{
+  background-color: #D1CFCD;
+  color: #ffffff;
+}
+.secNum{
+  width: 29%;
+  display: inline-block;
+  margin-bottom: 26rpx;
+  margin-right: 3%;
+  border-radius: 32rpx;
+  height: 64rpx;
+  border: 2rpx solid #D1CCC7;
+  color: #998D80;
+  background-color: #ffffff;
+  text-align: center;
+  line-height: 64rpx;
+}
+.cat-container{
+  width: 100%;
+  background-color: #faf7f5;
+}
+.grade{
+  width: 100%;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  height: 92rpx;
+  text-align: start;
+  line-height: 92rpx;
+  border-bottom: 2rpx dotted #998D80;
+  color: #1D2C33;
+  font-size: 28rpx;
+  font-weight: normal;
+  position: relative;
+}
+.dipaid{
+ position: absolute;
+ left: 95%;
+ top: 50%;
+ transform: translateX(-50%);
+}
+.page-btns{
+  width: 100%;
+  height: 126rpx;
+  box-sizing: border-box;
+  padding: 30rpx;
+}
+.page-btn{
+  width: 165rpx;
+  height: 40rpx;
+  padding: 12rpx 24rpx;
+  border: #E8E7E6 solid 2rpx;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 40rpx;
+  box-sizing: content-box;
+  background-color: #FCFAFA;
+  color: #998C7F;
+}
+.page-btn.left{
+  float: left;
+}
+.page-btn.right{
+  float: right;
+}

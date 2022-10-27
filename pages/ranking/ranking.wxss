@@ -1,0 +1,97 @@
+@import '/miniprogram_npm/@vant/weapp/common/index.wxss';
+
+.ranking {
+  width: 100vw;
+  padding-bottom: 50rpx;
+}
+
+.m-list-box {
+  width: 670.4rpx;
+  /* height: 682rpx; */
+  padding: 30rpx 0 60rpx;
+  margin: 0 40rpx;
+  border-bottom: 2rpx solid #ededed;
+}
+
+.list-title {
+  color: #1a1a1a;
+  margin-bottom: 32rpx;
+}
+
+.list-title>text {
+  font-size: 40rpx;
+  display: inline-block;
+  font-weight: bolder;
+}
+
+.list-title>.moreRank {
+  /* display: inline-block; */
+  width: 52rpx;
+  height: 56rpx;
+  padding: 0 34rpx;
+  border: 2rpx solid #f0f0f0;
+  color: #999999;
+  float: right;
+  font-size: 26rpx;
+  border-radius: 56rpx;
+  line-height: 56rpx;
+}
+
+.top1 {
+  margin-bottom: 30rpx;
+}
+
+.top1>image {
+  width: 200rpx;
+  height: 284rpx;
+  margin-right: 20rpx;
+  float: left;
+}
+
+.bookname {
+  font-weight: normal;
+  font-size: 32rpx;
+  color: #3b352d;
+  height: 34rpx;
+  line-height: 34rpx;
+  overflow: hidden;
+  margin-bottom: 26rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.authorname {
+  font-size: 24rpx;
+  color: #aba59a;
+  line-height: 26rpx;
+  height: 26rpx;
+  margin-bottom: 32rpx;
+}
+
+.bookcontent {
+  font-size: 28rpx;
+  line-height: 40rpx;
+  height: 160rpx;
+  color: #807a73;
+  overflow: hidden;
+  -webkit-line-clamp: 4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.nextTop{
+  position: relative;
+  height: 36rpx;
+  line-height: 36rpx;
+  padding-bottom: 34rpx;
+  font-size: 30rpx;
+  color: #6c6358;
+}
+.rank {
+  display: block;
+  width: 32rpx;
+  height: 34rpx;
+  text-align: center;
+  float: left;
+  margin-right: 20rpx;
+  color: #6c6358;
+}

@@ -1,0 +1,43 @@
+{
+  "pages":[
+        "pages/man/man",
+        "pages/woman/woman",
+        "pages/classify/classify",
+        "pages/ranking/ranking",
+        "pages/searchPage/searchPage",
+        "pages/bookDetail/bookDetail",
+        "pages/classifyDet/classifyDet",
+        "pages/catalogue/catalogue",
+        "pages/read/read"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "backgroundColor": "#f0f0f0",
+    "enablePullDownRefresh": true,
+    "navigationBarBackgroundColor": "#e4393c",
+    "navigationBarTitleText": "爱看小说",
+    "navigationBarTextStyle":"white"
+  },
+    "tabBar": {
+      "position": "top",
+      "selectedColor": "#e4393c",
+      "list": [{
+        "pagePath": "pages/man/man",
+        "text": "男频"
+      },{
+        "pagePath": "pages/woman/woman",
+        "text": "女频"
+      },{
+        "pagePath": "pages/classify/classify",
+        "text": "分类"
+      },{
+        "pagePath": "pages/ranking/ranking",
+        "text": "排行"
+      }]
+    },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-icon": "@vant/weapp/icon/index"
+  }
+}

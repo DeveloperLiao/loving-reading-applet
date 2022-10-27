@@ -1,0 +1,5 @@
+/* pages/man/man.wxss */
+.man-page{
+  box-sizing: border-box;
+  padding: 0 40rpx;
+}

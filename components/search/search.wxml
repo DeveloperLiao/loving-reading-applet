@@ -1,0 +1,7 @@
+<!--components/search/search.wxml-->
+<view class="search-ipt">
+  <view class="ipt-box">
+    <input class="ipt" bindinput="getTpt" type="text" placeholder="请输入书名或作者名"/>
+    <view class="btn" bindtap="toSearch">搜索</view>
+  </view>
+</view>

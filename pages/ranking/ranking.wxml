@@ -1,0 +1,65 @@
+<!--pages/ranking/ranking.wxml-->
+<wxs module="filters" src="../../utils/filters.wxs"></wxs>
+<view class="ranking">
+  <view class="male m-list-box">
+    <view class="list-title">
+      <text>男生排行榜</text>
+      <view class="moreRank">更多</view>
+    </view>
+    <view class="m-rank-list">
+      <view class="top1" bindtap="tobookDetail" data-id="{{filters.subStr(maleTop.sourceUrl,8)}}" data-name="{{maleTop.title}}" data-cover="{{maleTop.iconUrl}}">
+        <image src="{{maleTop.iconUrl}}"></image>
+        <view class="bookname">{{maleTop.title}}</view>
+        <view class="authorname">{{maleTop.author}}/{{maleTop.category}}</view>
+        <view class="bookcontent">{{maleTop.description}}</view>
+      </view>
+      <view wx:for="{{maleData}}" wx:key="index" class="top">
+        <view class="nextTop van-ellipsis" bindtap="tobookDetail" data-id="{{filters.subStr(item.sourceUrl,8)}}" data-name="{{item.title}}" data-cover="{{item.iconUrl}}">
+          <text class="rank">{{index+2}}</text>
+          <text class="next-title">{{item.title}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="female m-list-box">
+    <view class="list-title">
+      <text>女生排行榜</text>
+      <view class="moreRank">更多</view>
+    </view>
+    <view class="m-rank-list">
+      <view class="top1" bindtap="tobookDetail" data-id="{{filters.subStr(femaleTop.sourceUrl,8)}}" data-name="{{femaleTop.title}}" data-cover="{{femaleTop.iconUrl}}">
+        <image src="{{femaleTop.iconUrl}}"></image>
+        <view class="bookname">{{femaleTop.title}}</view>
+        <view class="authorname">{{femaleTop.author}}/{{femaleTop.category}}</view>
+        <view class="bookcontent">{{femaleTop.description}}</view>
+      </view>
+      <view wx:for="{{femaleData}}" wx:key="index" class="top">
+        <view class="nextTop van-ellipsis" bindtap="tobookDetail" data-id="{{filters.subStr(item.sourceUrl,8)}}" data-name="{{item.title}}" data-cover="{{item.iconUrl}}">
+          <text class="rank">{{index+2}}</text>
+          <text class="next-title">{{item.title}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="pub m-list-box">
+    <view class="list-title">
+      <text>图书排行榜</text>
+      <view class="moreRank">更多</view>
+    </view>
+    <view class="m-rank-list">
+      <view class="top1"  bindtap="tobookDetail" data-id="{{filters.subStr(pubTop.sourceUrl,8)}}" data-name="{{pubTop.title}}" data-cover="{{pubTop.iconUrl}}">
+        <image src="{{pubTop.iconUrl}}"></image>
+        <view class="bookname">{{pubTop.title}}</view>
+        <view class="authorname">{{pubTop.author}}/{{pubTop.category}}</view>
+        <view class="bookcontent">{{pubTop.description}}</view>
+      </view>
+      <view wx:for="{{pubData}}" wx:key="index" class="top">
+        <view class="nextTop van-ellipsis"  bindtap="tobookDetail" data-id="{{filters.subStr(item.sourceUrl,8)}}" data-name="{{item.title}}" data-cover="{{item.iconUrl}}">
+          <text class="rank">{{index+2}}</text>
+          <text class="next-title">{{item.title}}</text>
+        </view>
+      </view>
+    </view>
+    <search></search>
+  </view>
+</view>

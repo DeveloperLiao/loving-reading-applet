@@ -1,0 +1,44 @@
+/* pages/classify/classify.wxss */
+.classify{
+  background-color: #f5f5f5;
+}
+.m-lib{
+  padding: 30rpx;
+  background-color: white;
+  margin-bottom: 16rpx;
+  /* height: 348rpx; */
+}
+.m-lib-title{
+  height: 40rpx;
+  color: #ED6460;
+  display: block;
+  position: relative;
+  line-height: 100%;
+  font-weight: bold;
+  font-size: 36rpx;
+  padding-left: 16rpx;
+  /* margin-left: 12rpx; */
+}
+.title-left{
+  height: 24rpx;
+  width: 6rpx;
+  background-color: #ED6460;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.lib-list{
+  display: flex;
+  flex-wrap: wrap;
+}
+.lib-item{
+  width: 170rpx;
+  height: 60rpx;
+  margin: 20rpx 30rpx;
+  text-align: center;
+  line-height: 60rpx;
+  background-color: #f5f5f5;
+  border-radius: 10rpx;
+  color: #3b352d;
+}
